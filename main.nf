@@ -21,6 +21,7 @@ def helpMessage() {
         --threads                      Number of CPUs to use during blast job [16]
         --chunkSize                    Number of fasta records to use when splitting the query fasta file
         --app                          BLAST program to use [blastn;blastp,tblastn,blastx]
+        --genome                       If specified with a genome fasta file, a BLAST database will be generated for the genome
         --help                         This usage statement.
         """
 }
@@ -31,16 +32,42 @@ if (params.help) {
     exit 0
 }
 
+
 Channel
     .fromPath(params.query)
     .splitFasta(by: params.chunkSize, file:true)
     .set { queryFile_ch }
+
+
+
+if (params.genome) {
+  genomefile_ch = Channel
+                  .fromPath(params.genome)
+                  .map { file -> tuple(file.simpleName, file.parent, file) }
+
+  process runMakeBlastDB {
+    input:
+    set val(dbName), path(dbDir), file(FILE) from genomefile_ch
+
+    output:
+    val dbName into dbName_ch
+    path dbDir into dbDir_ch
+
+    script:
+    """
+    makeblastdb -in ${params.genome} -dbtype 'nucl' -out $dbDir/$dbName
+    makeblastdb -in ${params.genome} -dbtype 'prot' -out $dbDir/$dbName
+    """
+  }
+
+} else {
 
 Channel.fromPath(params.dbDir)
     .set { dbDir_ch }
 
 Channel.from(params.dbName)
     .set { dbName_ch }
+}
 
 process runBlast {
 
