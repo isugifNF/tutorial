@@ -18,11 +18,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nextflow workflow report for run id [voluminous_majorana]">
+  <meta name="description" content="Nextflow workflow report for run id [curious_pike]">
   <meta name="author" content="Paolo Di Tommaso, Phil Ewels">
   <link rel="icon" type="image/png" href="https://www.nextflow.io/img/favicon.png" />
 
-  <title>[voluminous_majorana] Nextflow Workflow Report</title>
+  <title>[curious_pike] Nextflow Workflow Report</title>
 
   <style type="text/css">
   /*!
@@ -137,7 +137,7 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
         <li class="nav-item"><a class="nav-link" href="#tasks">Tasks</a></li>
       </ul>
       <span class="navbar-text">
-        [voluminous_majorana]
+        [curious_pike]
       </span>
     </div>
   </nav>
@@ -146,43 +146,19 @@ table.DTCR_clonedTable.dataTable{position:absolute !important;background-color:r
     <div class="container">
 
       <h1 class="display-3">Nextflow workflow report</h1>
-      <h2 class="text-muted mb-4"><samp>[voluminous_majorana]</samp> </h2>
+      <h2 class="text-muted mb-4"><samp>[curious_pike]</samp> </h2>
 
       
-          <div class="alert alert-danger mb-4">
-              <h4>Workflow execution completed unsuccessfully!</h4>
-              <p>The exit status of the task that caused the workflow execution to fail was: <code>2</code>.</p>
-              <p>The full error message was:</p>
-              <pre>Error executing process > 'runBlast (2)'
-
-Caused by:
-  Process `runBlast (2)` terminated with an error exit status (2)
-
-Command executed:
-
-  blastn -num_threads 2 -db DB/blastDB -query input.2.fasta -outfmt '6' -evalue 1e-3 -out input.blastout
-
-Command exit status:
-  2
-
-Command output:
-  (empty)
-
-Command error:
-  BLAST Database error: No alias or index file found for nucleotide database [DB/blastDB] in search path [/Users/Lab/GitBook/Library/nextflow-tutorial/Severin_tutorial/tutorial/work/84/e8a014c3f66309de099c570777a89b::]
-
-Work dir:
-  /Users/Lab/GitBook/Library/nextflow-tutorial/Severin_tutorial/tutorial/work/84/e8a014c3f66309de099c570777a89b
-
-Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line</pre>
+          <div class="alert alert-success mb-4">
+              Workflow execution completed successfully!
           </div>
       
 
       <dl>
         <dt>Run times</dt>
         <dd>
-          <span id="workflow_start">16-Sep-2020 17:15:59</span> - <span id="workflow_complete">16-Sep-2020 17:16:01</span>
-          (<span id="completed_fromnow"></span>duration: <strong>1.7s</strong>)
+          <span id="workflow_start">17-Sep-2020 00:17:52</span> - <span id="workflow_complete">17-Sep-2020 00:17:52</span>
+          (<span id="completed_fromnow"></span>duration: <strong>253ms</strong>)
         </dd>
 
         <dl>
@@ -190,12 +166,12 @@ Tip: when you have fixed the problem you can continue the execution adding the o
             <div style="width: 0.0%" class="progress-bar bg-success" data-toggle="tooltip" data-placement="top" title="0 tasks succeeded"><span class="text-truncate">&nbsp; 0 succeeded &nbsp;</span></div>
             <div style="width: 0.0%" class="progress-bar bg-secondary" data-toggle="tooltip" data-placement="top" title="0 tasks were cached"><span class="text-truncate">&nbsp; 0 cached &nbsp;</span></div>
             <div style="width: 0.0%" class="progress-bar bg-warning" data-toggle="tooltip" data-placement="top" title="0 tasks reported and error and were ignored"><span class="text-truncate">&nbsp; 0 ignored &nbsp;</span></div>
-            <div style="width: 100.0%" class="progress-bar bg-danger" data-toggle="tooltip" data-placement="top" title="1 tasks failed"><span class="text-truncate">&nbsp; 1 failed &nbsp;</span></div>
+            <div style="width: 0.0%" class="progress-bar bg-danger" data-toggle="tooltip" data-placement="top" title="0 tasks failed"><span class="text-truncate">&nbsp; 0 failed &nbsp;</span></div>
           </div>
         </dl>
 
         <dt>Nextflow command</dt>
-        <dd><pre class="nfcommand"><code>nextflow run main.nf</code></pre></dd>
+        <dd><pre class="nfcommand"><code>nextflow run main2.nf</code></pre></dd>
       </dl>
 
       <dl class="row small">
@@ -213,16 +189,16 @@ Tip: when you have fixed the problem you can continue the execution adding the o
 
         
           <dt class="col-sm-3">Script name</dt>
-          <dd class="col-sm-9"><samp>main.nf</samp></dd>
+          <dd class="col-sm-9"><samp>main2.nf</samp></dd>
         
 
         
           <dt class="col-sm-3">Script ID</dt>
-          <dd class="col-sm-9"><code>f928978a004cc414d77cbe441d12faa5</code></dd>
+          <dd class="col-sm-9"><code>e522656a1eac6abecb0d8b3e54d7f623</code></dd>
         
 
         <dt class="col-sm-3">Workflow session</dt>
-        <dd class="col-sm-9"><code>8b55789c-b996-4f93-8c85-2f2081c43a89</code></dd>
+        <dd class="col-sm-9"><code>139ecf03-7e14-45b9-947a-17fd473a1452</code></dd>
 
         
 
@@ -1044,7 +1020,7 @@ $(function() {
 
   // Nextflow report data
   window.data = { "trace":[
-{"task_id":"2","hash":"84\/e8a014","native_id":"9283","process":"runBlast","module":"-","container":"ncbi\/blast","tag":"-","name":"runBlast (2)","status":"FAILED","exit":"2","submit":"1600294560967","start":"1600294561049","complete":"1600294561454","duration":"487","realtime":"405","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/Lab\/GitBook\/Library\/nextflow-tutorial\/Severin_tutorial\/tutorial\/work\/84\/e8a014c3f66309de099c570777a89b","script":"\n  blastn -num_threads 2 -db DB\/blastDB -query input.2.fasta -outfmt \'6\' -evalue 1e-3 -out input.blastout\n  ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-"},{"task_id":"5","hash":"88\/5b18ae","native_id":"9284","process":"runBlast","module":"-","container":"ncbi\/blast","tag":"-","name":"runBlast (5)","status":"FAILED","exit":"2","submit":"1600294560973","start":"1600294561052","complete":"1600294561511","duration":"538","realtime":"459","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/Lab\/GitBook\/Library\/nextflow-tutorial\/Severin_tutorial\/tutorial\/work\/88\/5b18ae2f06738b2e679f0cd1799719","script":"\n  blastn -num_threads 2 -db DB\/blastDB -query input.5.fasta -outfmt \'6\' -evalue 1e-3 -out input.blastout\n  ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-"},{"task_id":"4","hash":"f6\/96208c","native_id":"9288","process":"runBlast","module":"-","container":"ncbi\/blast","tag":"-","name":"runBlast (4)","status":"FAILED","exit":"2","submit":"1600294560979","start":"1600294561053","complete":"1600294561514","duration":"535","realtime":"461","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/Lab\/GitBook\/Library\/nextflow-tutorial\/Severin_tutorial\/tutorial\/work\/f6\/96208cdb60538191defcad5c29aa5a","script":"\n  blastn -num_threads 2 -db DB\/blastDB -query input.4.fasta -outfmt \'6\' -evalue 1e-3 -out input.blastout\n  ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-"},{"task_id":"1","hash":"c2\/844509","native_id":"9295","process":"runBlast","module":"-","container":"ncbi\/blast","tag":"-","name":"runBlast (1)","status":"FAILED","exit":"2","submit":"1600294560984","start":"1600294561054","complete":"1600294561516","duration":"532","realtime":"462","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/Lab\/GitBook\/Library\/nextflow-tutorial\/Severin_tutorial\/tutorial\/work\/c2\/844509f55c446b1d9406d5cb6b75ac","script":"\n  blastn -num_threads 2 -db DB\/blastDB -query input.1.fasta -outfmt \'6\' -evalue 1e-3 -out input.blastout\n  ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-"},{"task_id":"3","hash":"d8\/e21a97","native_id":"9306","process":"runBlast","module":"-","container":"ncbi\/blast","tag":"-","name":"runBlast (3)","status":"FAILED","exit":"2","submit":"1600294560989","start":"1600294561056","complete":"1600294561519","duration":"530","realtime":"463","%cpu":"-","%mem":"-","rss":"-","vmem":"-","peak_rss":"-","peak_vmem":"-","rchar":"-","wchar":"-","syscr":"-","syscw":"-","read_bytes":"-","write_bytes":"-","attempt":"1","workdir":"\/Users\/Lab\/GitBook\/Library\/nextflow-tutorial\/Severin_tutorial\/tutorial\/work\/d8\/e21a9701fd5c5c931f3641ed3e038b","script":"\n  blastn -num_threads 2 -db DB\/blastDB -query input.3.fasta -outfmt \'6\' -evalue 1e-3 -out input.blastout\n  ","scratch":"-","queue":"-","cpus":"1","memory":"-","disk":"-","time":"-","env":"-","error_action":"TERMINATE","vol_ctxt":"-","inv_ctxt":"-"}], "summary":[{"cpuUsage":null,"process":"runBlast","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":450,"min":405,"q1":459,"q2":461,"q3":462,"max":463,"minLabel":"runBlast (2)","maxLabel":"runBlast (3)","q1Label":"runBlast (5)","q2Label":"runBlast (4)","q3Label":"runBlast (1)"},"writes":null}] };
+], "summary":[] };
 
   </script>
 
